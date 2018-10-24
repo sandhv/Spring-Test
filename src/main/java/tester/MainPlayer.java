@@ -14,6 +14,12 @@ public class MainPlayer {
 		tester = applicationContext.getBean("testerMp3", Tester.class);
 		tester.test();
 		
+		tester = applicationContext.getBean("testerBlueRay", Tester.class);
+		tester.test();
+		
+		tester = applicationContext.getBean("testerSmarthphone", Tester.class);
+		tester.test();
+		
 	
 	}
 

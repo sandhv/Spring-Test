@@ -14,20 +14,22 @@
 
 <bean id="testerMp3" class="tester.Tester">
 	<property name="device" ref="mp3Player"> </property></bean>
-	
-<bean id="dvdPlayer" class="tester.DVDPlayer"></bean>
-<bean id="mp3Player" class="tester.MP3Player">
-<property name="playlist" ref="pop"> </property>
-</bean>
+
 <bean id="testerDvd" class="tester.Tester">
      <property name="device" ref="dvdPlayer"> </property></bean>
+     
+<bean id="testerBlueRay" class="tester.Tester">
+     <property name="device" ref="blueRay"> </property></bean>
 
-<bean id="blueRay" class="tester.Tester">
-<property name="device" ref="blueRay"> </property></bean>
-
-<bean id="smarthphone" class="tester.Tester">
-<property name="device" ref="smarthphone"> </property></bean>
-
+<bean id="testerSmarthphone" class="tester.Tester">
+     <property name="device" ref="smarthphone"></property></bean>
+     
+<bean id="smarthphone" class="tester.Smarthphone"></bean>
+<bean id="blueRay" class="tester.BlueRay"></bean>	
+<bean id="dvdPlayer" class="tester.DVDPlayer"></bean>
+<bean id="mp3Player" class="tester.MP3Player">
+      <property name="playlist" ref="pop"> </property>
+</bean>
 
 
 <bean id="pop" class="tester.Pop"></bean>
