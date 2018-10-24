@@ -9,8 +9,28 @@
          http://www.springframework.org/schema/context/spring-context.xsd
          http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-<bean id="factura" class="mx.sintelti.spring.Factura">
+<bean id="factura" class="mx.sintelti.spring.Factura"></bean>
 
+
+<bean id="testerMp3" class="tester.Tester">
+	<property name="device" ref="mp3Player"> </property></bean>
+	
+<bean id="dvdPlayer" class="tester.DVDPlayer"></bean>
+<bean id="mp3Player" class="tester.MP3Player">
+<property name="playlist" ref="pop"> </property>
 </bean>
+<bean id="testerDvd" class="tester.Tester">
+     <property name="device" ref="dvdPlayer"> </property></bean>
 
+<bean id="blueRay" class="tester.Tester">
+<property name="device" ref="blueRay"> </property></bean>
+
+<bean id="smarthphone" class="tester.Tester">
+<property name="device" ref="smarthphone"> </property></bean>
+
+
+
+<bean id="pop" class="tester.Pop"></bean>
+<bean id="rock" class="tester.Rock"></bean>
+<bean id="classic" class="tester.Classic"></bean>
 </beans>

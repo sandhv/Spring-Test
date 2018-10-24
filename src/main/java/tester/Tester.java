@@ -2,17 +2,19 @@ package tester;
 
 public class Tester {
 
-	public void testDVD(DVDPlayer dvdPlayer){
-		dvdPlayer.turnOn();
-		dvdPlayer.play();
-		dvdPlayer.stop();
-		dvdPlayer.turnOff();	
-	}
+    private Device device;
 	
-	public void testMP3(MP3Player mp3Player) {
-		mp3Player.turnOn();
-		mp3Player.play();
-		mp3Player.stop();
-		mp3Player.turnOff();	
+	public void test() {
+		
+		device.turnOn();
+		device.play();
+		device.stop();
+		device.turnOff();
+	}
+
+	public void setDevice(Device device) {
+		this.device=device;
+		
+		
 	}
 }
